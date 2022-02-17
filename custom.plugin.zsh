@@ -1,6 +1,6 @@
 # Common
-alias rmri="rm -rf node_modules yarn.lock && ycc && yin --network-concurrency 1"
-alias rmris="rm -rf node_modules yarn.lock && ycc && yin --network-concurrency 1 && ys"
+alias rmri="rm -rf node_modules yarn.lock && yin --network-concurrency 1"
+alias rmris="rm -rf node_modules yarn.lock && yin --network-concurrency 1 && ys"
 
 # WishMobile
 ## misc
