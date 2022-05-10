@@ -1,7 +1,13 @@
 # Initialize the repository
 alias gsetpuser='git config user.name "Hugh Lee" && git config user.email "u88803494@gmail.com"'
 
+# misc
+alias cls='clear'
+alias gbdallbranch='git stash && gco staging && git branch | grep -v "staging" | xargs git branch -D'
+
 # Eucare
+alias gsetuser='git config user.name "Hugh Lee" && git config user.email "hugh.lee@eucare.com.tw"'
+
 ## Debug scripts
 alias ysp='yarn start:production'
 alias yss='yarn start:staging'
@@ -23,12 +29,6 @@ eucarePaths=(
   "../e-center"
   "../web"
 )
-
-yfa() {
-  for i in ${eucarePaths[@]}; do
-    $i && echo $i && gfpu &&
-  done
-}
 
 # Initialize Eucare repository
 alias gsetpuser='git config user.name "Hugh Lee" && git config user.email "hugh.lee@eucare.com.tw"'
