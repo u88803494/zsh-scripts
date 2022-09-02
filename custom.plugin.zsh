@@ -16,6 +16,7 @@ alias ysd='yarn start:development'
 ## checkout
 alias gcp='git checkout production'
 alias gcs='git checkout staging'
+alias gcsb='git checkout sandbox'
 
 ## Upgrade packages
 alias gfpu="git stash save && git fetch && gcs -f && git pull origin staging"
