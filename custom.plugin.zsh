@@ -9,10 +9,17 @@ alias gbdallbranch='git stash && gco staging && git branch | grep -v "staging" |
 alias gsetuser='git config user.name "Hugh Lee" && git config user.email "hugh.lee@eucare.com.tw"'
 
 ## Debug scripts
+### yarn
 alias ysb="yarn start:sandbox"
 alias ysd='yarn start:development'
 alias ysp='yarn start:production'
 alias yss='yarn start:staging'
+
+### pnpm
+alias pdsb="pnpm dev:sandbox"
+alias pdd='pnpm dev:development'
+alias pdp='pnpm dev:production'
+alias pds='pnpm dev:staging'
 
 ## checkout
 alias gcp='git checkout production'
