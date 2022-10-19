@@ -21,6 +21,9 @@ alias pdd='pnpm dev:development'
 alias pdp='pnpm dev:production'
 alias pds='pnpm dev:staging'
 
+### For mono repo
+alias gapc="gaa && pnpm cz"
+
 ## checkout
 alias gcp='git checkout production'
 alias gcs='git checkout staging'
