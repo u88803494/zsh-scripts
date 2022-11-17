@@ -21,8 +21,10 @@ alias pdd='pnpm dev:development'
 alias pdp='pnpm dev:production'
 alias pds='pnpm dev:staging'
 
-### For mono repo
+### pnpm for mono repo
 alias gapc="gaa && pnpm cz"
+alias psw="pnpm exec nx serve web-practitioner --configuration=development"
+alias psa="pnpm exec nx serve web-admin --configuration=development"
 
 ## checkout
 alias gcp='git checkout production'
