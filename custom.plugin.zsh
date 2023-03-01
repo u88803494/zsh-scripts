@@ -25,6 +25,7 @@ alias pds='pnpm dev:staging'
 alias gapc="gaa && pnpm cz"
 alias psw="pnpm exec nx serve web-practitioner --configuration=development"
 alias psa="pnpm exec nx serve web-admin --configuration=development"
+alias psf="pnpm exec nx serve web-staff --configuration=development"
 alias pss="pnpm db-sync && pst"
 
 ## checkout
