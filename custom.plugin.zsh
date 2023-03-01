@@ -4,6 +4,7 @@ alias gsetpuser='git config user.name "Hugh Lee" && git config user.email "u8880
 # misc
 alias cls='clear'
 alias gbdallbranch='git stash && gco staging && git branch | grep -v "staging" | xargs git branch -D'
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
 
 # Eucare
 alias gsetuser='git config user.name "Hugh Lee" && git config user.email "hugh.lee@eucare.com.tw"'
