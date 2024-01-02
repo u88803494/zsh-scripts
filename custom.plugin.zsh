@@ -31,14 +31,20 @@ alias psp="pnpm exec nx run web-pharmacist:serve:development"
 alias pswp="pnpm exec nx run web-patient:serve --configuration=development"
 alias pss="pnpm db-sync && pst"
 
-## checkout
+## Checkout
 alias gcp='git checkout production'
 alias gcs='git checkout staging'
 alias gcsb='git checkout sandbox'
 
-## Upgrade packages
+## Upgrade staging
 alias gupdate="git stash save && git fetch && gcs && git pull origin staging"
 alias gupdateweb="~/eucare/web && git stash save && git fetch && gcs && git pull origin staging"
+
+## Sync newest staging
+alias gsys="git fetch && gcs && gl && gco $(git branch --show-current) && git rebase origin/staging"
+
+## Add a removed name branch for merge
+alias gcbm="git checkout -b $(git branch --show-current | sed "s/hugh\///") staging"
 
 ## Automatic processing
 eucarePaths=(
