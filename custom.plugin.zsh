@@ -37,8 +37,8 @@ alias gcs='git checkout staging'
 alias gcsb='git checkout sandbox'
 
 ## Upgrade packages
-alias gfpu="git stash save && git fetch && gcs -f && git pull origin staging"
-alias gfw="~/eucare/web && git stash save && git fetch && gcs -f && git pull origin staging"
+alias gupdate="git stash save && git fetch && gcs && git pull origin staging"
+alias gupdateweb="~/eucare/web && git stash save && git fetch && gcs && git pull origin staging"
 
 ## Automatic processing
 eucarePaths=(
