@@ -44,7 +44,7 @@ alias gupdateweb="~/eucare/web && git stash save && git fetch && gcs && git pull
 alias gsys="git fetch && gcs && gl && gco $(git branch --show-current) && git rebase origin/staging"
 
 ## Add a removed name branch for merge
-alias gcbm="git checkout -b $(git branch --show-current | sed "s/hugh\///") staging"
+alias gcbm="git checkout -b $(git branch --show-current | sed "s/hugh\///") staging && gp && gco $(git branch --show-current)"
 
 ## Automatic processing
 eucarePaths=(
