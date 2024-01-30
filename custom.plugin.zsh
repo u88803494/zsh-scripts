@@ -37,7 +37,7 @@ alias gcs='git checkout staging'
 alias gcsb='git checkout sandbox'
 
 ## Upgrade staging
-alias gupdate="git stash save && git fetch && gcs && git pull origin staging"
+alias gupdate="git stash save && git fetch && gcs && git pull origin staging && gbdallbranch"
 alias gupdateweb="~/eucare/web && git stash save && git fetch && gcs && git pull origin staging"
 
 ## Sync newest staging
