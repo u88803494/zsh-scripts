@@ -1,6 +1,7 @@
-# Initialize the repository
-alias gsetpuser='git config user.name "Hugh Lee" && git config user.email "u88803494@gmail.com"'
+# AI Tools
+alias c='claude'
+alias g='gemini'
 
-# misc
+# Utilities
 alias cls='clear'
-alias gbdallbranch='git stash && gco main && git branch | grep -v "main" | xargs git branch -D'
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
