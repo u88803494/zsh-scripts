@@ -12,6 +12,11 @@ alias c='claude'
 # 範例：g "解釋這段程式碼"
 alias g='gemini'
 
+# GitHub Copilot CLI 快捷指令
+# 用途：GitHub Copilot 命令列工具（2025 新版 Public Preview）
+# 範例：cop "如何用 git 刪除遠端分支"
+alias cop='copilot'
+
 # ============================================
 # Utilities - 常用工具指令
 # ============================================
