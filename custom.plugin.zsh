@@ -7,6 +7,23 @@
 # 範例：c "幫我寫一個函數"
 alias c='claude'
 
+# Claude AI CLI 第二帳號
+# 用途：用第二個 Claude 帳號啟動，分攤主帳號用量
+# 說明：
+#   - CLAUDE_CONFIG_DIR: 指向獨立設定目錄，登入狀態與 c 分開
+#   - --mcp-config: 載入與主帳號共用的 MCP 設定
+#   - 其餘設定（CLAUDE.md/agents/commands/settings）已 symlink 共用
+# 範例：cc "幫我寫一個函數"
+alias cc='CLAUDE_CONFIG_DIR="$HOME/.claude-alt" claude --mcp-config "$HOME/.claude-shared/mcp.json"'
+
+# 同步主帳號 MCP 設定到第二帳號共用檔
+# 用途：在主帳號用 claude mcp add 新增 MCP 後執行一次
+# 範例：claude-sync-mcp
+claude-sync-mcp() {
+  jq '{mcpServers}' "$HOME/.claude.json" > "$HOME/.claude-shared/mcp.json" \
+    && echo "✅ 已同步 $(jq -r '.mcpServers | keys | length' "$HOME/.claude-shared/mcp.json") 個 MCP server"
+}
+
 # Gemini AI CLI 快捷指令（備用）
 # 用途：當 Claude 掛掉時的替代方案
 # 範例：g "解釋這段程式碼"
@@ -16,6 +33,11 @@ alias g='gemini'
 # 用途：GitHub Copilot 命令列工具（2025 新版 Public Preview）
 # 範例：cop "如何用 git 刪除遠端分支"
 alias cop='copilot'
+
+# Google Antigravity IDE 快捷指令
+# 用途：用 Antigravity 開啟目錄（類似 code .）
+# 範例：a . 或 a ~/project
+alias a='agy'
 
 # ============================================
 # Utilities - 常用工具指令
