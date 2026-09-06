@@ -10,9 +10,9 @@
 # 創建符號連結
 # -s: 創建符號連結（symbolic link）
 # -f: 如果目標已存在，強制覆蓋
-# 來源：~/personal/zsh-scripts
+# 來源：~/Developer/Personal/zsh-scripts
 # 目標：~/.oh-my-zsh/custom/zsh-scripts
-ln -sf ~/personal/zsh-scripts ~/.oh-my-zsh/custom/zsh-scripts
+ln -sf ~/Developer/Personal/zsh-scripts ~/.oh-my-zsh/custom/zsh-scripts
 
-echo "✅ Symlink created: ~/.oh-my-zsh/custom/zsh-scripts → ~/personal/zsh-scripts"
+echo "✅ Symlink created: ~/.oh-my-zsh/custom/zsh-scripts → ~/Developer/Personal/zsh-scripts"
 echo "🔄 Restart terminal or run: source ~/.zshrc"
