@@ -20,7 +20,7 @@ alias cc='CLAUDE_CONFIG_DIR="$HOME/.claude-alt" claude --mcp-config "$HOME/.clau
 # 用途：在主帳號用 claude mcp add 新增 MCP 後執行一次
 # 範例：claude-sync-mcp
 claude-sync-mcp() {
-  jq '{mcpServers}' "$HOME/.claude.json" > "$HOME/.claude-shared/mcp.json" \
+  jq '{mcpServers: (.mcpServers // {})}' "$HOME/.claude.json" > "$HOME/.claude-shared/mcp.json" \
     && echo "✅ 已同步 $(jq -r '.mcpServers | keys | length' "$HOME/.claude-shared/mcp.json") 個 MCP server"
 }
 
